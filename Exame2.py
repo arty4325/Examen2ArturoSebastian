@@ -25,6 +25,18 @@ class MiClase:
         if any(song is None for song in lista):
             return False
         return True
+    
+    def Encuentra(self, lista, elemento):
+        def todos_enteros(lis):
+            return all(isinstance(elemento, int) for elemento in lis)
+        if not todos_enteros(lista):
+            return None
+        if elemento in lista:
+            return True
+        else:
+            return False
+            
+        
 ################################################################################################
 #Ejemplo de ejecución
 # Crear un objeto de la clase MiClase
