@@ -15,9 +15,6 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt  # Asegúrate de que se instalen las dependencias si las tienes
-
       - name: Run unit tests
         run: python test_Examne2.py  # Ejecuta tus pruebas unitarias desde el archivo test_Examne2.py
 
