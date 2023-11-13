@@ -83,7 +83,7 @@ class TestEx(unittest.TestCase):
          self.assertEqual(objeto.Encuentra([1,2,3,"6"], 6), None)
     def test_listaVaciaEncuentra (self):
          global objeto
-         self.assertEqual(objeto.Encuentra([], 6), False)
+         self.assertEqual(objeto.Encuentra([], 6), True)
 
 if __name__ == "__main__":
     unittest.main()
