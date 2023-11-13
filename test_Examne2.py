@@ -71,9 +71,19 @@ class TestEx(unittest.TestCase):
         global objeto
         self.assertEqual(objeto.VerificaListaCanciones([]), True)
         
-        
-
-
+    # Test Encuentra Elemento
+    def test_EncuentraElemento (self):
+         global objeto
+         self.assertEqual(objeto.Encuentra([1,2,3,4], 4), True)
+    def test_NoEncuentraElemento (self):
+         global objeto
+         self.assertEqual(objeto.Encuentra([1,2,3,5], 4), False)
+    def test_listaNoDeEnteros (self):
+         global objeto
+         self.assertEqual(objeto.Encuentra([1,2,3,"6"], 6), None)
+    def test_listaVaciaEncuentra (self):
+         global objeto
+         self.assertEqual(objeto.Encuentra([], 6), False)
 
 if __name__ == "__main__":
     unittest.main()
