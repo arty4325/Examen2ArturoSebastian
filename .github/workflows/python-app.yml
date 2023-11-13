@@ -16,13 +16,13 @@ jobs:
           python-version: '3.x'
 
       - name: Run unit tests
-        run: python test_Examne2.py  # Ejecuta tus pruebas unitarias desde el archivo test_Examne2.py
+        run: python test_Examne2.py
 
       - name: Check test status and approve PR
         if: success()
         uses: actions/github-script@0.9.0
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.REVIEW_TOKEN}}  # Utiliza el nuevo secreto aquí
           script: |
             github.pulls.createReview({
               owner: context.repo.owner,
